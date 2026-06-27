@@ -1,0 +1,19 @@
+{
+  "name": "tg-product-store-bot",
+  "version": "2.0.0",
+  "description": "Telegram digital-goods store: User Bot + Owner-only Admin Bot",
+  "main": "user-bot/index.js",
+  "scripts": {
+    "start:user": "node user-bot/index.js",
+    "start:admin": "node admin-bot/index.js",
+    "start": "node user-bot/index.js & node admin-bot/index.js & wait"
+  },
+  "dependencies": {
+    "dotenv": "16.4.5",
+    "node-telegram-bot-api": "0.66.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "license": "MIT"
+}
