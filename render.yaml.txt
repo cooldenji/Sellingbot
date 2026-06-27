@@ -1,0 +1,21 @@
+services:
+  - type: worker
+    name: tg-store-bot
+    env: node
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: ADMIN_BOT_TOKEN
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: ADMIN_NOTIFY_CHAT_ID
+        sync: false
+    disk:
+      name: bot-data
+      mountPath: /opt/render/project/src/data
+      sizeGB: 1
